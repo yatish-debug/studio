@@ -26,12 +26,15 @@ import { Input } from "@/components/ui/input";
 import { UserNav } from "@/components/user-nav";
 import { EcoChampionIcon } from "@/components/icons";
 import { mockStudent } from "@/lib/mock-data";
+import { User } from "@/lib/types";
 
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const { badges, ...userWithoutBadges } = mockStudent;
+
   return (
     <SidebarProvider>
       <Sidebar>
@@ -91,7 +94,7 @@ export default function DashboardLayout({
                 <SidebarMenuButton asChild>
                     <Link href="/">
                     <div className="flex items-center gap-2">
-                        <UserNav user={mockStudent} />
+                        <UserNav user={userWithoutBadges} />
                         <div className="flex flex-col">
                             <span className="font-semibold text-sm">{mockStudent.name}</span>
                             <span className="text-xs text-muted-foreground">{mockStudent.class}</span>
@@ -122,7 +125,7 @@ export default function DashboardLayout({
               <Bell className="h-4 w-4" />
               <span className="sr-only">Toggle notifications</span>
             </Button>
-            <UserNav user={mockStudent} />
+            <UserNav user={userWithoutBadges} />
         </header>
         <main className="flex-1 p-4 sm:p-6 lg:p-8 bg-secondary/30">
             {children}
