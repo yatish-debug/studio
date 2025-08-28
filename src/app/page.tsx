@@ -25,7 +25,7 @@ export default function Home() {
             <Link href="#about">About</Link>
           </Button>
           <Button asChild>
-            <Link href="/student/dashboard">Login</Link>
+            <Link href="/student">Login</Link>
           </Button>
         </nav>
       </header>
@@ -41,10 +41,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" asChild>
-                <Link href="/student/dashboard">Start as a Student</Link>
+                <Link href="/student">Start as a Student</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                 <Link href="/teacher/dashboard">I'm a Teacher</Link>
+                 <Link href="/teacher">I'm a Teacher</Link>
               </Button>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function Home() {
                     <Input id="password" type="password" placeholder="••••••••" />
                   </div>
                    <div className="flex flex-col gap-2">
-                      <Button className="w-full" asChild><Link href="/student/dashboard">Login / Sign Up</Link></Button>
+                      <Button className="w-full" asChild><Link href="/student">Login / Sign Up</Link></Button>
                       <Button variant="outline" className="w-full">
                         <svg className="mr-2 h-4 w-4" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 126 23.4 172.9 61.9l-76.2 64.5C308.6 102.3 279.2 88 248 88c-73.2 0-132.3 59.2-132.3 132S174.8 352 248 352c78.8 0 117.3-56.8 122.4-87.5h-122.4v-83.3h235.2c2.1 12.3 3.2 24.9 3.2 37.8z"></path></svg>
                         Sign in with Google
